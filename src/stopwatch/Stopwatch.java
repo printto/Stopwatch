@@ -6,7 +6,7 @@ import java.util.Scanner;
  * A Stopwatch that measures elapsed time between a starting time
  * and stopping time, or until the present time.
  * @author Pappim Pipatkasrira
- * @version 1.0
+ * @version 28.01.2017
  * @since Jan 27, 2017
  */
 public class Stopwatch {
