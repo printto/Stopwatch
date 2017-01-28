@@ -2,6 +2,8 @@ package stopwatch;
 
 /**
  * Add Double objects from an array.
+ * @author Pappim Pipatkasrira
+ * @version 28.01.2017
  */
 
 public class SumDouble implements Runnable{

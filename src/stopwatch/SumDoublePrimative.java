@@ -2,6 +2,8 @@ package stopwatch;
 
 /**
  * Add double primatives from an array.
+ * @author Pappim Pipatkasrira
+ * @version 28.01.2017
  */
 
 public class SumDoublePrimative implements Runnable {

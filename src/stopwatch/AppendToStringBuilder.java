@@ -2,6 +2,8 @@ package stopwatch;
 
 /**
  * Append chars to a StringBuilder.
+ * @author Pappim Pipatkasrira
+ * @version 28.01.2017
  */
 
 public class AppendToStringBuilder implements Runnable {

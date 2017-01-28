@@ -2,6 +2,8 @@ package stopwatch;
 
 /**
  * Test timing of the runnable object.
+ * @author Pappim Pipatkasrira
+ * @version 28.01.2017
  */
 
 public class TaskTimer {

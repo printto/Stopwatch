@@ -2,6 +2,8 @@ package stopwatch;
 
 /**
  * Add BigDecimal objects from an array.
+ * @author Pappim Pipatkasrira
+ * @version 28.01.2017
  */
 
 import java.math.BigDecimal;

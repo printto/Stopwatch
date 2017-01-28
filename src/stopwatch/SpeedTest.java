@@ -28,6 +28,9 @@ import java.util.Scanner;
  * the Main class or put them in separate files.
  * To define multiple classes in one source file, only one class
  * is declared "public" and the other classes omit the "public".
+ * 
+ * @author Pappim Pipatkasrira
+ * @version 28.01.2017
  */
 public class SpeedTest {
 	// size of the array used in floating point tasks.
