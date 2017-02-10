@@ -10,6 +10,7 @@ public class TaskTimer {
 
 	public static void mesureAndPrint(Runnable r){
 		Stopwatch timer = new Stopwatch();
+		System.out.println( r );
 		timer.start();
 		r.run();
 		timer.stop();

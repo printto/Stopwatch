@@ -13,7 +13,6 @@ public class SumDouble implements Runnable{
 	
 	public SumDouble(int counter, int ARRAY_SIZE){
 		this.counter = counter;
-		System.out.printf("Sum array of Double objects with count=%,d\n", counter);
 		this.values = new Double[ARRAY_SIZE];
 		for(int i=0; i<ARRAY_SIZE; i++) values[i] = new Double(i+1);
 	}
@@ -26,6 +25,11 @@ public class SumDouble implements Runnable{
 			sum = sum + values[i];
 		}
 		System.out.println("sum = " + sum);
+	}
+	
+	public String toString(){
+		String format = String.format("Sum array of Double objects with count=%,d", counter);
+		return format;
 	}
 
 }

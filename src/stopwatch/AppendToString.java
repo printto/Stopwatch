@@ -13,7 +13,6 @@ public class AppendToString implements Runnable {
 	
 	public AppendToString(int count){
 		this.count = count;
-		System.out.printf("Append %,d chars to String\n", count);
 	}
 
 	public void run(){
@@ -23,6 +22,11 @@ public class AppendToString implements Runnable {
 			result = result + CHAR;
 		}
 		System.out.println("final string length = " + result.length());
+	}
+	
+	public String toString(){
+		String format = String.format("Append %,d chars to String", count);
+		return format;
 	}
 
 }

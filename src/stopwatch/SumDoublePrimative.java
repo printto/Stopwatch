@@ -13,7 +13,6 @@ public class SumDoublePrimative implements Runnable {
 	
 	public SumDoublePrimative(int counter, int ARRAY_SIZE){
 		this.counter = counter;
-		System.out.printf("Sum array of double primitives with count=%,d\n", counter);
 		// create array of values to add before we start the timer
 		this.values = new double[ARRAY_SIZE];
 		for(int k=0; k<ARRAY_SIZE; k++) values[k] = k+1;
@@ -26,8 +25,12 @@ public class SumDoublePrimative implements Runnable {
 			if (i >= values.length) i = 0;  // reuse the array when get to last value
 			sum = sum + values[i];
 		}
-		System.out.println("sum = " + sum);
-		
+		System.out.println("sum = " + sum);	
+	}
+	
+	public String toString(){
+		String format = String.format("Sum array of double primitives with count=%,d", counter);
+		return format;
 	}
 
 }

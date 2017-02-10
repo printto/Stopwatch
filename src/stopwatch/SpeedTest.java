@@ -37,29 +37,21 @@ public class SpeedTest {
 	// Don't make this too big to avoid slowing down test with paging
 	// or possible out-of-memory error.
 	static final int ARRAY_SIZE = 500000;
-
+	
 	/**
 	 * Run the tasks.
 	 */
-	public static void main(String[] args) throws IOException {
-
-		Runnable append50000ToString = new AppendToString(50000);
-		TaskTimer.mesureAndPrint(append50000ToString);
-		// same task but with a larger string size (append more chars)
-		Runnable append100000ToString = new AppendToString(100000);
-		TaskTimer.mesureAndPrint(append100000ToString);
-		// do the same thing using StringBuilder.
-		Runnable append100000ToStringBuilder = new AppendToStringBuilder(100000);
-		TaskTimer.mesureAndPrint(append100000ToStringBuilder);
-
-		// Use a large loop count for floating point tests in order to get accurate times
-		int counter = 1000000000; 
-
-		Runnable sumDoublePrimitive = new SumDoublePrimative(counter,ARRAY_SIZE);
-		TaskTimer.mesureAndPrint(sumDoublePrimitive);
-		Runnable sumDouble = new SumDouble(counter,ARRAY_SIZE);
-		TaskTimer.mesureAndPrint(sumDouble);
-		Runnable sumBigDecimal = new SumBigDecimal(counter,ARRAY_SIZE);
-		TaskTimer.mesureAndPrint(sumBigDecimal);
+	public static void main(String[] args) {
+		int counter = 1000000000;
+		Runnable[] tasks = new Runnable[] {
+				new AppendToString(50000),
+				new AppendToString(100000),
+				new AppendToStringBuilder(100000),
+				new SumDoublePrimative(counter,ARRAY_SIZE),
+				new SumDouble(counter,ARRAY_SIZE),
+				new SumBigDecimal(counter,ARRAY_SIZE)
+		};
+		for(Runnable task: tasks) TaskTimer.mesureAndPrint(task);
 	}
+	
 }
