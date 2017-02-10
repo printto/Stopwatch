@@ -13,8 +13,8 @@ The result of this program running on my laptop:
 
 ## Explanation of Results
 
-Appending StringBuilder is faster than appending String because appending String require creating entirely new String object.
+Appending "StringBuilder" is faster than appending "String" because "StringBuilder" creates empty array of the character ready for adding new character to the array, while appending "String" require creating entirely new "String" object and copy the previous "String" and add new "String" to it.
 
-"double" is faster than "Double object" and "BigDecimal" because it is primitivevariable but "Double object" and "BigDecimal" are objects.
+"primative double" is faster than "Double" and "BigDecimal" because it is primitive variable but "Double" and "BigDecimal" are objects.
 
-BigDecimal requires more memory so it perform slowest.
+"BigDecimal" creates the slots for the decimal while "Double" just extend more function for "primitive double" so "BigDecimal" performs slowest.
